@@ -32,7 +32,7 @@ class Forms extends React.Component {
                     required
                     />
                 </div>
-                <Button />
+                <Button>Adicionar</Button>
             </form>
         )
     }

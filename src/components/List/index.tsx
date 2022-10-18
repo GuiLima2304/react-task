@@ -1,4 +1,5 @@
 import React from "react";
+import Item from "./Item";
 import style from './style.module.scss';
 
 function List() {
@@ -22,11 +23,11 @@ function List() {
         <aside className={style.listTask}>
             <h2>Study Day</h2>
             <ul>
-                {tasks.map((task, index) => (
-                    <li className={style.item}>
-                        <h3>{task.item}</h3>
-                        <span>{task.time}</span>
-                    </li>
+                {tasks.map((item, index) => (
+                   <Item
+                   key={index} //só uma forma do react se organizar
+                    {...item}
+                   />
                 ))}
             </ul>
         </aside>
